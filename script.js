@@ -32,40 +32,26 @@
    For now this is EMPTY because you don't have
    portfolio projects to display yet.
    ========================================================= */
-
 const projects = [
 
-    /*
-    =========================================================
-    HOW TO ADD A PROJECT LATER
-    =========================================================
-
-    Copy this object and change the information.
-
     {
-        title: "Your Restaurant",
+        title: "Velore Restaurant",
         type: "Restaurant",
         style: "Minimal",
 
         description:
-            "A refined restaurant website designed around
-             clarity, atmosphere and elegant interaction.",
+            "A refined restaurant experience built around atmosphere, clarity and elegant interaction.",
 
         image:
-            "images/projects/restaurant-01/cover.jpg",
+            "images/velore-homepage.png",
 
         previewImages: [
-            "images/projects/restaurant-01/home.jpg",
-            "images/projects/restaurant-01/menu.jpg",
-            "images/projects/restaurant-01/about.jpg"
+            "images/velore-homepage.png"
         ],
 
         link:
-            "https://your-demo.vercel.app"
+            "https://velore-restaurant.vercel.app/"
     }
-
-    =========================================================
-    */
 
 ];
 
