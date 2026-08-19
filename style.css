@@ -1168,7 +1168,8 @@ textarea {
 .scroll-indicator {
     position: absolute;
 
-    left: 48px;
+    left: 50%;
+transform: translateX(-50%);
     bottom: 44px;
 
     z-index: 2;
@@ -1192,11 +1193,7 @@ textarea {
 
 
 .scroll-line {
-    width: 32px;
-    height: 1px;
-
-    background:
-        var(--accent-deep);
+    display: none;
 }
 
 
@@ -2886,12 +2883,9 @@ textarea {
         width: 100%;
     }
 
-
-    .scroll-indicator {
-        left: 18px;
-
-        bottom: 30px;
-    }
+.scroll-indicator {
+    bottom: 30px;
+}
 
 
     .statement-section,
