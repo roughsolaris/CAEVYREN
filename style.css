@@ -460,18 +460,59 @@ textarea {
 }
 
 
-.loader-brand {
-    font-size: 13px;
+.loader-logo {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 18px;
 
-    font-weight: 600;
+    opacity: 0;
+    transform: scale(0.82);
 
-    letter-spacing:
-        0.45em;
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(145, 218, 235, 0.18)
+        );
 
-    color:
-        var(--accent-bright);
+    animation:
+        loaderLogoReveal 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.15s forwards;
 }
 
+
+.loader-brand {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.38em;
+    padding-left: 0.38em;
+
+    color: var(--accent-bright);
+    line-height: 1;
+}
+
+@keyframes loaderLogoReveal {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.82);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 .loader-line {
     position: relative;
@@ -527,7 +568,7 @@ textarea {
    ========================================================= */
 
 .site-header {
-    position: fixed;
+    position: absolute;
 
     top: 0;
     left: 0;
@@ -586,15 +627,16 @@ textarea {
 
 
 /* BRAND */
-
 .brand {
     display: inline-flex;
-
     align-items: center;
-
-    gap: 11px;
 }
-
+.brand-logo {
+    width: 80px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
 .brand-mark {
     width: 34px;
@@ -3008,7 +3050,7 @@ transform: translateX(-50%);
     }
 
 
-    .future-capability
+    .future-capability,
     .capability-main {
         grid-template-columns:
             1fr;
@@ -6068,4 +6110,33 @@ a.contact-option:hover {
         inset 0 1px 0 rgba(255, 255, 255, 0.22),
         0 12px 40px rgba(0, 0, 0, 0.28),
         0 0 25px rgba(104, 208, 231, 0.08);
+}
+/* =========================================================
+   CAEVYREN NAVBAR LOGO
+   ========================================================= */
+
+.brand-logo {
+    display: block;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.brand:hover .brand-logo {
+    opacity: 0.82;
+    transform: translateY(-1px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .brand-logo {
+        width: 70px;
+    }
+
 }
