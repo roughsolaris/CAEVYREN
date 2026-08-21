@@ -51,6 +51,26 @@ const projects = [
 
         link:
             "https://velore-restaurant.vercel.app/"
+    },
+
+
+    {
+        title: "The Ember House",
+        type: "Restaurant",
+        style: "Premium",
+
+        description:
+            "A contemporary dining experience designed with a premium visual identity, elegant typography and immersive atmosphere.",
+
+        image:
+            "images/ember-house.png",
+
+        previewImages: [
+            "images/ember-house.png"
+        ],
+
+        link:
+            "https://the-ember-house.vercel.app/"
     }
 
 ];
